@@ -1,6 +1,6 @@
 function obtenerNumeroInput(mensaje) {
-    var input = prompt(mensaje);
-    var numero = parseFloat(input);
+    let input = prompt(mensaje);
+    let numero = parseFloat(input);
     
     if (isNaN(numero)) {
         alert("Por favor, ingrese un número válido.");
@@ -11,9 +11,9 @@ function obtenerNumeroInput(mensaje) {
 }
 
 function calcularPrecioFinal(precioBase, porcentajeImpuestos, porcentajeDescuento) {
-    var impuestos = (precioBase * porcentajeImpuestos) / 100;
-    var descuentos = (precioBase * porcentajeDescuento) / 100;
-    var precioFinal = precioBase + impuestos - descuentos;
+    let impuestos = (precioBase * porcentajeImpuestos) / 100;
+    let descuentos = (precioBase * porcentajeDescuento) / 100;
+    let precioFinal = precioBase + impuestos - descuentos;
     
     return {
         precioBase: precioBase.toFixed(2),
@@ -23,11 +23,8 @@ function calcularPrecioFinal(precioBase, porcentajeImpuestos, porcentajeDescuent
     };
 }
 
-var precioBase = obtenerNumeroInput("Ingrese el precio base del producto:");
-var porcentajeImpuestos = obtenerNumeroInput("Ingrese el porcentaje de impuestos:");
-var porcentajeDescuento = obtenerNumeroInput("Ingrese el porcentaje de descuento:");
-
-var resultado = calcularPrecioFinal(precioBase, porcentajeImpuestos, porcentajeDescuento);
+let precioBase = obtenerNumeroInput("Ingrese el precio base del producto:");let porcentajeImpuestos = obtenerNumeroInput("Ingrese el porcentaje de impuestos:");let porcentajeDescuento = obtenerNumeroInput("Ingrese el porcentaje de descuento:");
+let resultado = calcularPrecioFinal(precioBase, porcentajeImpuestos, porcentajeDescuento);
 
 alert("Precio base: $" + resultado.precioBase +
       "\nImpuestos: $" + resultado.impuestos +
