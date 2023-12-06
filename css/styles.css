@@ -1,0 +1,15 @@
+*{
+    margin: 1rem;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ececec;
+}
+
+.container{
+    text-align: center;
+    justify-content: center;
+}
